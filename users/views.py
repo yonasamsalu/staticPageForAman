@@ -26,3 +26,8 @@ def password(request):
                 messages.success(request, 'Registration successful!')
                 return redirect('home')  # Redirect to the home page or any other page
     return render(request, 'password.html')
+
+
+# users/views.py
+def home(request):
+    return render(request, 'home.html')
