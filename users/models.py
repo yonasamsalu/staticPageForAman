@@ -4,7 +4,7 @@ from django.db import models
 # Create your models here.
 
 class User(models.Model):
-    username = models.CharField(max_length=50)
+    your_name = models.CharField(max_length=50)
     father_name = models.CharField(max_length=50)
     grandfather_name = models.CharField(max_length=50)
     email = models.EmailField(unique=True)
@@ -13,4 +13,4 @@ class User(models.Model):
 
 
 def __str__(self):
-        return self.username
+        return self.your_name
