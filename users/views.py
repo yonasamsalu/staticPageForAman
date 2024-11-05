@@ -13,7 +13,7 @@ def register(request):
             return redirect('password')  # Redirect to password page
     else:
         form = UserForm()
-    return render(request, 'register.html', {'form': form})
+    return render(request, 'users/register.html', {'form': form})
 
 def password(request):
     if request.method == 'POST':
@@ -25,9 +25,9 @@ def password(request):
                 user.save()
                 messages.success(request, 'Registration successful!')
                 return redirect('home')  # Redirect to the home page or any other page
-    return render(request, 'password.html')
+    return render(request, 'users/password.html')
 
 
 # users/views.py
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'users/home.html')
