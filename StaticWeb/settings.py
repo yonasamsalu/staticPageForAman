@@ -37,8 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users'
+    'users',
+    'crispy_forms',
+    'crispy_bootstrap4',  # Add this line for Bootstrap 4 support
+
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'  # Set the template pack to bootstrap4
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -55,7 +61,7 @@ ROOT_URLCONF = 'StaticWeb.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],  # Ensure this line points to the main template folder if you have one
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
